@@ -6,7 +6,7 @@ var denodeify = require('denodeify');
 var mkdir = denodeify(require('mkdirp'));
 var exec = denodeify(require('child_process').exec, function(err, stdout, stderr) { return [err, stdout]; });
 
-var repourl = 'git://github.com/financial-times/polyfill-service';
+var repourl = 'git://github.com/hull/polyfill-service';
 
 function trim(str) {
 	return str.trim();
