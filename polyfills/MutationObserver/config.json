@@ -1,0 +1,15 @@
+{
+  "aliases": [
+    "mutationobserver",
+    "mutation-observer"
+  ],
+  "browsers": {
+    "ie": "8 - 9"
+  },
+  "dependencies": [
+    "WeakMap",
+    "Event"
+  ],
+  "spec":"https://w3c.github.io/webcomponents/spec/imports/",
+  "docs":"http://www.html5rocks.com/en/tutorials/webcomponents/imports/"
+}
