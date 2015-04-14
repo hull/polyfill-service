@@ -1,0 +1,19 @@
+{
+  "aliases": [
+    "htmlimports"
+  ],
+  "browsers": {
+    "firefox": "*",
+    "ie": "*",
+    "opera": "*",
+    "safari": "*"
+  },
+  "dependencies": [
+    "WeakMap",
+    "XMLHttpRequest",
+    "MutationObserver",
+    "Object.defineProperty"
+  ],
+  "spec":"https://w3c.github.io/webcomponents/spec/imports/",
+  "docs":"http://www.html5rocks.com/en/tutorials/webcomponents/imports/"
+}
