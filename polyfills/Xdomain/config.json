@@ -1,0 +1,12 @@
+{
+  "aliases": [
+    "default"
+  ],
+  "browsers": {
+    "ie": "8 - 9"
+  },
+  "dependencies": [
+    "XMLHttpRequest"
+  ],
+  "docs": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS"
+}
