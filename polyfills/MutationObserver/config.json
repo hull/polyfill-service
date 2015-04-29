@@ -4,7 +4,7 @@
     "mutation-observer"
   ],
   "browsers": {
-    "ie": "8 - 9"
+    "ie": "8 - 10"
   },
   "dependencies": [
     "WeakMap",
