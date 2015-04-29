@@ -12,14 +12,19 @@
       "name": "FT Labs",
       "email": "enquiries@labs.ft.com",
       "url": "http://labs.ft.com"
+    },
+    {
+      "name" : "Hull",
+      "email" : "contact@hull.io",
+      "url" : "http://hull.io"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/financial-times/polyfill-service.git"
+    "url": "https://github.com/hull/polyfill-service.git"
   },
   "bugs": {
-    "url": "https://github.com/financial-times/polyfill-service/issues"
+    "url": "https://github.com/hull/polyfill-service/issues"
   },
   "scripts": {
     "start": "forever start --minUptime=1000 --spinSleepTime=1000 --plain service/index.js",
