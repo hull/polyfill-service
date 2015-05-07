@@ -113,6 +113,7 @@
       var callbacks = (self._callbacks[event] || []).slice();
       var cb = callbacks.pop();
       while (cb) {
+        args=args || []
         cb.apply(self, args);
         cb = callbacks.pop();
       }
