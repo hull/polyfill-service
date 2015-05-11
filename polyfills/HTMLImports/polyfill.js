@@ -93,7 +93,7 @@ window.HTMLImports = window.HTMLImports || { flags: {} };
     }
   }
   function isImportLoaded(link) {
-    return useNative ? link.__loaded || link.import && link.import.readyState !== "loading" : link.__importParsed;
+    return useNative ? link.__loaded || link['import'] && link['import'].readyState !== "loading" : link.__importParsed;
   }
   if (useNative) {
     new MutationObserver(function(mxns) {
@@ -116,7 +116,7 @@ window.HTMLImports = window.HTMLImports || { flags: {} };
       return element.localName === "link" && element.rel === "import";
     }
     function handleImport(element) {
-      var loaded = element.import;
+      var loaded = element['import'];
       if (loaded) {
         markTargetLoaded({
           target: element
@@ -414,8 +414,8 @@ HTMLImports.addModule(function(scope) {
       if (HTMLImports.__importsParsingHook) {
         HTMLImports.__importsParsingHook(elt);
       }
-      if (elt.import) {
-        elt.import.__importParsed = true;
+      if (elt['import']) {
+        elt['import'].__importParsed = true;
       }
       this.markParsingComplete(elt);
       if (elt.__resource && !elt.__error) {
@@ -524,7 +524,7 @@ HTMLImports.addModule(function(scope) {
         for (var i = 0, l = nodes.length, p = 0, n; i < l && (n = nodes[i]); i++) {
           if (!this.isParsed(n)) {
             if (this.hasResource(n)) {
-              return nodeIsImport(n) ? this.nextToParseInDoc(n.import, n) : n;
+              return nodeIsImport(n) ? this.nextToParseInDoc(n['import'], n) : n;
             } else {
               return;
             }
@@ -547,7 +547,7 @@ HTMLImports.addModule(function(scope) {
       return this.dynamicElements.indexOf(elt) >= 0;
     },
     hasResource: function(node) {
-      if (nodeIsImport(node) && node.import === undefined) {
+      if (nodeIsImport(node) && node['import'] === undefined) {
         return false;
       }
       return true;
@@ -621,7 +621,7 @@ HTMLImports.addModule(function(scope) {
           }
           this.documents[url] = doc;
         }
-        elt.import = doc;
+        elt['import'] = doc;
       }
       parser.parseNext();
     },
