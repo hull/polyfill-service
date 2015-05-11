@@ -9,9 +9,14 @@
     "safari": "*"
   },
   "dependencies": [
+    "document.currentScript",
+    "document.head",
+    "Element.prototype.matches",
+    "CustomEvent",
     "WeakMap",
     "XMLHttpRequest",
     "Xdomain",
+    "URL",
     "MutationObserver",
     "Object.defineProperty"
   ],
