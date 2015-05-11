@@ -653,7 +653,12 @@ HTMLImports.addModule(function(scope) {
     return !!Object.getOwnPropertyDescriptor(doc, "baseURI");
   }
   function makeDocument(resource, url) {
-    var doc = document.implementation.createHTMLDocument(IMPORT_LINK_TYPE);
+    if(document.implementation.createHTMLDocument){
+      var doc = document.implementation.createHTMLDocument(IMPORT_LINK_TYPE);
+    } else {
+      // IE8
+      var doc = new ActiveXObject("htmlfile");
+    }
     doc._URL = url;
     var base = doc.createElement("base");
     base.setAttribute("href", url);
