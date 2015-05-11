@@ -1,0 +1,1 @@
+"currentScript" in document
