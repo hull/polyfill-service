@@ -138,8 +138,9 @@ window.HTMLImports = window.HTMLImports || { flags: {} };
   whenReady(function(detail) {
     HTMLImports.ready = true;
     HTMLImports.readyTime = new Date().getTime();
-    var evt = rootDocument.createEvent("CustomEvent");
-    evt.initCustomEvent("HTMLImportsLoaded", true, true, detail);
+    var evt = new CustomEvent('HTMLImportsLoaded', {bubbles:true, cancelable:true, detail:detail})
+    // var evt = rootDocument.createEvent("CustomEvent");
+    // evt.initCustomEvent("HTMLImportsLoaded", true, true, detail);
     rootDocument.dispatchEvent(evt);
   });
   scope.IMPORT_LINK_TYPE = IMPORT_LINK_TYPE;
@@ -732,8 +733,7 @@ HTMLImports.addModule(function(scope) {
   if (isIE && typeof window.CustomEvent !== "function") {
     window.CustomEvent = function(inType, params) {
       params = params || {};
-      var e = document.createEvent("CustomEvent");
-      e.initCustomEvent(inType, Boolean(params.bubbles), Boolean(params.cancelable), params.detail);
+      var e = new CustomEvent(inType, {bubbles:Boolean(params.bubbles), cancelable:Boolean(params.cancelable), detail:params.detail})
       return e;
     };
     window.CustomEvent.prototype = window.Event.prototype;
