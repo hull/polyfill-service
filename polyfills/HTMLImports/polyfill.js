@@ -522,6 +522,13 @@ HTMLImports.addModule(function(scope) {
         this._mayParse.push(doc);
         var nodes = doc.querySelectorAll(this.parseSelectorsForNode(doc));
         for (var i = 0, l = nodes.length, p = 0, n; i < l && (n = nodes[i]); i++) {
+          // IE8
+          if (!n.localName){
+            nodeName = n.nodeName
+            if(!nodeName.indexOf('#')==0){
+              n.localName = nodeName.toLowerCase()
+            }
+          }
           if (!this.isParsed(n)) {
             if (this.hasResource(n)) {
               return nodeIsImport(n) ? this.nextToParseInDoc(n['import'], n) : n;
