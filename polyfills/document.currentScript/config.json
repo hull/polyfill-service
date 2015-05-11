@@ -1,0 +1,10 @@
+{
+  "browsers": {
+    "ie": "6 - 10"
+  },
+  "dependencies": [
+    "Object.defineProperty"
+  ],
+  "spec": "https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript",
+  "docs": "https://github.com/JamesMGreene/document.currentScript"
+}
