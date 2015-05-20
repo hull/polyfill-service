@@ -4,6 +4,7 @@
   ],
   "browsers": {
     "firefox": "*",
+    "ios_saf": "*",
     "ie": "*",
     "opera": "*",
     "safari": "*"
