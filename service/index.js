@@ -1,10 +1,12 @@
 var NODE_ENV = process.env.NODE_ENV||'development',
     cluster  = require('express-cluster'),
-    PORT     = Number(process.env.PORT) || 3000;
     compression = require('compression'),
-    express  = require('express');
+    express  = require('express'),
+    parseArgs = require('minimist'),
     app = require('./app');
 
+argv = parseArgs(process.argv.slice(2));
+PORT = argv.port || Number(process.env.PORT) || 3000;
 
 function StartApp(worker) {
   app.get('/robots.txt', function(req, res) {
