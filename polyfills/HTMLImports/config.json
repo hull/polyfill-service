@@ -5,6 +5,9 @@
   "browsers": {
     "firefox": "*",
     "ios_saf": "*",
+    "ios_chr": "*",
+    "ie_mob": "*",
+    "android": "*",
     "ie": "*",
     "opera": "*",
     "safari": "*"
