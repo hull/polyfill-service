@@ -7,9 +7,10 @@
     "ios_saf": "*",
     "ios_chr": "*",
     "ie_mob": "*",
-    "android": "*",
+    "android": "* - 39",
+    "chrome": "* - 35",
     "ie": "*",
-    "opera": "*",
+    "opera": "* - 27",
     "safari": "*"
   },
   "dependencies": [
