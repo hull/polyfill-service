@@ -4,7 +4,8 @@
     "mutation-observer"
   ],
   "browsers": {
-    "ie": "8 - 10"
+    "ie": "8 - 10",
+    "android": "* - 4.3"
   },
   "dependencies": [
     "setImmediate",
